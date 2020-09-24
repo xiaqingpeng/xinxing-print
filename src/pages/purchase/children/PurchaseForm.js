@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View, Platform} from 'react-native';
 import {connect} from 'react-redux'
 
-import PickerIOS from '../../../conments/PickerIOS';
-import PickerAndroid from '../../../conments/PickerAndroid';
+// import PickerIOS from '../../../conments/PickerIOS';
+// import PickerAndroid from '../../../conments/PickerAndroid';
 import Calendar from '../../../conments/Calendar';
 
 
@@ -111,7 +111,8 @@ class PurchaseForm extends Component {
                             <View
                                 style={{flex:1,height: 36,justifyContent:'center',backgroundColor:'#EEE',borderColor: '#999', borderWidth: 1,borderRadius:10,paddingLeft:15}}
                             >
-                                <PickerAndroid secelt={purchaseType} value={type} onChange={this.setType} />
+                                {/* <PickerAndroid secelt={purchaseType} value={type} onChange={this.setType} /> */}
+                                <Text>666</Text>
                             </View>
                         )
                     }
@@ -204,11 +205,11 @@ class PurchaseForm extends Component {
                         <Text style={{fontSize:13,color:'#333'}}>搜索</Text>
                     </TouchableOpacity>
                 </View>
-                {
+                {/* {
                     Platform.OS === 'ios' && <PickerIOS
                         secelt={purchaseType} visible={pickerVisible} value={type} onChange={this.setType} close={()=>{this.setState({pickerVisible:false})}}
                     />
-                }
+                } */}
                 <Calendar visible={calendarVisible} define={this.pickDefine} close={this.pickClose} />
             </View>
         );

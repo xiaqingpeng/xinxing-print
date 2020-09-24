@@ -19,6 +19,7 @@ class Login extends Component {
     }
 
     login = () => {
+        this.props.navigation.replace('home');
         let {userNo,password} = this.state;
         if (userNo.trim().length < 1){
             Toast.show('请输入用戶代號', {
